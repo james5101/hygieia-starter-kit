@@ -4,6 +4,7 @@
 db/
 #java certificates
 *.crt
+*.env
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
