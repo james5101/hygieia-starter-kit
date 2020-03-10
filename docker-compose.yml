@@ -40,7 +40,7 @@ services:
       - GITHUB_HOST=github.com
       - GITHUB_CRON=0/60 * * * * *
        #See https://hygieia.github.io/Hygieia/troubleshoot.html for how to get a personal access token
-      - GITHUB_PERSONAL_ACCESS_TOKEN=
+      - GITHUB_PERSONAL_ACCESS_TOKEN= #http://user:password@jenkinsurl:8080
       - JENKINS_CRON=0/60 * * * * *
       - JENKINS_SERVER=
       - SONAR_CRON=0/60 * * * * *
