@@ -17,7 +17,7 @@ services:
   jenkins:
     image: jenkins/jenkins:lts
     ports:
-      - 8081:8080
+      - 8080:8080
       - 50000:50000
 
   sonarqube:
@@ -31,7 +31,7 @@ services:
     ports:
       - "80:80"
       - "27017:27017"
-      - "8080:8080"
+      - "8085:8080"
     environment: 
       - PROXY_URL=
       - PROXY_PORT=
@@ -40,9 +40,9 @@ services:
       - GITHUB_HOST=github.com
       - GITHUB_CRON=0/60 * * * * *
        #See https://hygieia.github.io/Hygieia/troubleshoot.html for how to get a personal access token
-      - GITHUB_PERSONAL_ACCESS_TOKEN="${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      - GITHUB_PERSONAL_ACCESS_TOKEN=
       - JENKINS_CRON=0/60 * * * * *
-      - JENKINS_SERVER= #https://<username>:<password>@jenkinsInstanceUrl.com/
+      - JENKINS_SERVER=
       - SONAR_CRON=0/60 * * * * *
       - SONAR_HOST=localhost:9000
       - SONAR_VERSION=6.7
